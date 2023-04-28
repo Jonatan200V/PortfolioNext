@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Burger } from '../icons';
 import MenuMobile from './MenuMobile';
-import { useCycle } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import useBurger from '@/hooks/useBurger';
 
 export default function BurgerAction() {
@@ -18,7 +18,9 @@ export default function BurgerAction() {
       >
         <Burger burger={burger} toogleBurger={toogleBurger} />
       </button>
-      {viewRoutes && <MenuMobile close={closeRoutes} />}
+      <AnimatePresence>
+        {viewRoutes && <MenuMobile close={closeRoutes} />}
+      </AnimatePresence>
     </li>
   );
 }

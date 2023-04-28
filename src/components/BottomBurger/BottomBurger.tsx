@@ -1,23 +1,35 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Burger } from '../icons';
 import useBurger from '@/hooks/useBurger';
 import MenuMobile from '../Header/MenuMobile';
+import { AnimatePresence } from 'framer-motion';
 
 export default function BottomBurger() {
+  const [index, setIndex] = useState<number>(20);
+
   const { burger, closeRoutes, routes, toogleBurger, viewRoutes } = useBurger();
+  useEffect(() => {
+    if (index === 1) {
+      setIndex(() => 20);
+    } else {
+      setTimeout(() => setIndex(() => 1), 500);
+    }
+  }, [viewRoutes]);
 
   return (
     <div
       className="burger__bottom"
       style={{
-        zIndex: `${viewRoutes ? 20 : 1}`,
+        zIndex: `${index}`,
       }}
     >
-      <button onClick={routes}>
+      <div onClick={routes}>
         <Burger burger={burger} toogleBurger={toogleBurger} view={viewRoutes} />
-        {viewRoutes && <MenuMobile close={closeRoutes} />}
-      </button>
+        <AnimatePresence>
+          {viewRoutes && <MenuMobile close={closeRoutes} />}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

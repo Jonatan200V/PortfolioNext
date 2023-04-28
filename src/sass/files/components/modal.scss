@@ -4,13 +4,13 @@
   height: 100vh;
   backdrop-filter: blur(1em);
   top: 0;
-  z-index: 10;
+  z-index: 30;
   @include flex(row, nowrap, center, center, px-to-em(0px));
   &__container {
     width: 100vw;
     height: 100vh;
     background: #fff;
-    @include flex(column, nowrap, space-between, center, 0.6em);
+    @include flex(column, nowrap, space-between, center, 0);
     box-shadow: px-to-em(0px) px-to-em(8px) px-to-em(12px) px-to-em(-2px)
       rgba(0, 0, 0, 0.75);
     border-radius: 1em;

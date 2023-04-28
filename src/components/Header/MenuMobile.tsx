@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
+import { variantsProject } from '@/variants/opacity';
 type Props = {
   close: () => void;
 };
@@ -28,7 +29,13 @@ const links: LinksMobile[] = [
 
 export default function MenuMobile({ close }: Props) {
   return (
-    <div className="routes">
+    <motion.div
+      className="routes"
+      variants={variantsProject}
+      animate={'open'}
+      exit={'closed'}
+      initial={'closed'}
+    >
       {links.map((link) => (
         <div className="routes__div" key={link.id}>
           <a className="routes__a" href={link.route} onClick={close}>
@@ -36,6 +43,6 @@ export default function MenuMobile({ close }: Props) {
           </a>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
