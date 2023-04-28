@@ -10,6 +10,9 @@
   border-radius: 50%;
   position: relative;
   border: px-to-em(2px) solid #fff;
+  @include responsive(px-to-em(600px)) {
+    display: none;
+  }
   &__bottom {
     position: fixed;
     bottom: px-to-em(5px);
@@ -18,6 +21,9 @@
       rgba(0, 0, 0, 0.75);
     border-radius: 50%;
     z-index: 20;
+    @include responsive(px-to-em(600px)) {
+      display: none;
+    }
   }
 }
 .main {
@@ -56,4 +62,12 @@
       background: #8e2de270;
     }
   }
+}
+.underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: $color-blue;
 }

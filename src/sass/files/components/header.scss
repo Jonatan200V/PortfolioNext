@@ -14,7 +14,7 @@
     max-width: px-to-em(1468px);
   }
   &__ul {
-    @include flex(row, nowrap, center, center, px-to-em(5px));
+    @include flex(row, nowrap, center, center, 0.5em);
   }
   &__li {
     border: px-to-em(1px) solid $color-blue;
@@ -24,6 +24,19 @@
   &__btn {
     position: relative;
     z-index: 20;
+  }
+  &__links {
+    @include flex(row, nowrap, center, center, 0.5em);
+    @include responsive(px-to-em(600px)) {
+      display: flex;
+    }
+    display: none;
+  }
+  &__lis {
+    position: relative;
+    height: 1.8em;
+    @include flex(row, nowrap, center, center, 0);
+    cursor: pointer;
   }
 }
 

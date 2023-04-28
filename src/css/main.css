@@ -232,6 +232,11 @@ select:focus {
   position: relative;
   border: 0.125em solid #fff;
 }
+@media screen and (min-width: 37.5em) {
+  .burger {
+    display: none;
+  }
+}
 .burger__bottom {
   position: fixed;
   bottom: 0.3125em;
@@ -239,6 +244,11 @@ select:focus {
   box-shadow: 0em 0.5em 0.75em -0.125em rgba(0, 0, 0, 0.75);
   border-radius: 50%;
   z-index: 20;
+}
+@media screen and (min-width: 37.5em) {
+  .burger__bottom {
+    display: none;
+  }
 }
 
 .main {
@@ -294,6 +304,15 @@ select:focus {
   background: rgba(142, 45, 226, 0.4392156863);
 }
 
+.underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgb(157, 198, 236);
+}
+
 .header {
   height: clamp(4.9375em, 3.125em + 1.05vw, 9.375em);
   display: flex;
@@ -323,7 +342,7 @@ select:focus {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 0.3125em;
+  gap: 0.5em;
 }
 .header__li {
   border: 0.0625em solid rgb(157, 198, 236);
@@ -333,6 +352,29 @@ select:focus {
 .header__btn {
   position: relative;
   z-index: 20;
+}
+.header__links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  display: none;
+}
+@media screen and (min-width: 37.5em) {
+  .header__links {
+    display: flex;
+  }
+}
+.header__lis {
+  position: relative;
+  height: 1.8em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  cursor: pointer;
 }
 
 [data-icon=true] {
@@ -728,7 +770,7 @@ select:focus {
   background: #fff;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   gap: 0;
   box-shadow: 0em 0.5em 0.75em -0.125em rgba(0, 0, 0, 0.75);
@@ -769,6 +811,7 @@ select:focus {
   background-size: contain;
   background-position: 0;
   height: 3.3em;
+  width: 100%;
 }
 .modal__name {
   font-family: GothamMedium;
@@ -778,6 +821,7 @@ select:focus {
 .modal__image {
   object-fit: contain;
   width: 100%;
+  max-width: 31.25em;
   height: auto;
   aspect-ratio: 16/9;
 }

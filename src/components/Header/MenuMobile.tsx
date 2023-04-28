@@ -9,7 +9,7 @@ export interface LinksMobile {
   id: number;
   name: string;
 }
-const links: LinksMobile[] = [
+export const links: LinksMobile[] = [
   {
     route: '#about',
     id: 400,
