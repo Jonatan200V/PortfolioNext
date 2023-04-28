@@ -313,7 +313,7 @@ select:focus {
   gap: 0;
   padding: 0.625em 0.375em;
   background: #f7f6f6;
-  box-shadow: 0em 0.1875em 0.3125em -0.3125em rgba(0, 0, 0, 0.75);
+  box-shadow: 0 em 0.1875 em 0.3125 em -0.3125 em rgba(0, 0, 0, 0.75);
   width: 100vw;
   max-width: 91.75em;
 }
@@ -349,7 +349,7 @@ select:focus {
 }
 .about__welcome {
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -373,7 +373,7 @@ select:focus {
 .about__lenguages {
   cursor: pointer;
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -417,7 +417,7 @@ select:focus {
   padding: 0.625em;
   border-radius: 0.5em;
   position: relative;
-  box-shadow: 0em 0.3125em 0.3125em -0.3125em rgba(0, 0, 0, 0.75);
+  box-shadow: 0 em 0.3125 em 0.3125 em -0.3125 em rgba(0, 0, 0, 0.75);
 }
 .about__p:hover .about__background {
   width: 100%;
@@ -434,7 +434,7 @@ select:focus {
   font-size: 1.375em;
   letter-spacing: 0.0625em;
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -443,7 +443,7 @@ select:focus {
 }
 .about__a {
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -497,7 +497,7 @@ select:focus {
   font-size: 1.375em;
   letter-spacing: 0.0625em;
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -509,7 +509,7 @@ select:focus {
   font-size: 1.5em;
   margin: 0 0 1em 0;
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -567,7 +567,7 @@ select:focus {
 }
 .projects__h2 {
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -612,7 +612,7 @@ select:focus {
 }
 .projects__subtitle {
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -804,7 +804,7 @@ select:focus {
 }
 .modal__h2 {
   font-family: GothamTitle;
-  font-size: 1.65625em;
+  font-size: 1.65625 em;
   background: linear-gradient(to right, rgb(157, 198, 236), #8e2de2);
   -webkit-background-clip: text;
   -moz-background-clip: text;

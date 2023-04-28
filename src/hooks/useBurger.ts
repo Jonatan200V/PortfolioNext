@@ -15,7 +15,7 @@ export default function useBurger() {
     viewRoutes
       ? (document.body.style.overflowY = 'auto')
       : (document.body.style.overflowY = 'hidden');
-
+    toogleBurger();
     setViewRoutes(!viewRoutes);
   };
 

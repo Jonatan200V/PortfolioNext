@@ -29,15 +29,16 @@
   );
   box-shadow: 40px 200px 400px -75px rgba(0, 0, 0, 1) inset;
 }
-@mixin shadow($a:3px ){
-  box-shadow: px-to-em(0px) px-to-em($a) px-to-em(5px) px-to-em(-5px) rgba(0,0,0,0.75);
-} 
-@mixin text-linear{
-    font-family: GothamTitle;
-    font-size: px-to-em(26.5px);
-    background: linear-gradient(to right, $color-blue, $color-purple);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
+@mixin shadow($a: 3px) {
+  box-shadow: calc(0px / 16px) em calc($a / 16px) em calc(5px / 16px) em
+    calc(-5px / 16px) em rgba(0, 0, 0, 0.75);
+}
+@mixin text-linear {
+  font-family: GothamTitle;
+  font-size: calc(26.5px / 16px) em;
+  background: linear-gradient(to right, $color-blue, $color-purple);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

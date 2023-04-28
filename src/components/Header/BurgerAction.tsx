@@ -16,7 +16,7 @@ export default function BurgerAction() {
           zIndex: `${viewRoutes ? 20 : 1}`,
         }}
       >
-        <Burger burger={burger} toogleBurger={toogleBurger} />
+        <Burger burger={burger} />
       </button>
       <AnimatePresence>
         {viewRoutes && <MenuMobile close={closeRoutes} />}

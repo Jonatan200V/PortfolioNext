@@ -16,6 +16,11 @@ export default function BottomBurger() {
       setTimeout(() => setIndex(() => 1), 500);
     }
   }, [viewRoutes]);
+  // useEffect(() => {
+  //   if (index === 20) {
+  //     setIndex(1);
+  //   }
+  // }, []);
 
   return (
     <div
@@ -25,7 +30,7 @@ export default function BottomBurger() {
       }}
     >
       <div onClick={routes}>
-        <Burger burger={burger} toogleBurger={toogleBurger} view={viewRoutes} />
+        <Burger burger={burger} view={viewRoutes} />
         <AnimatePresence>
           {viewRoutes && <MenuMobile close={closeRoutes} />}
         </AnimatePresence>

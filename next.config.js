@@ -10,6 +10,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  devtool: 'source-map',
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
