@@ -1,0 +1,54 @@
+.tech {
+  text-align: center;
+  @include flex(column, wrap, center, center, 1.5em);
+  &__section {
+    @include flex(row, wrap, center, center, 0.5em);
+    width: 100vw;
+  }
+  &__techs {
+    position: relative;
+    max-width: px-to-em(300px);
+  }
+  &__map {
+    @include flex(row, wrap, center, flex-start, 1em);
+  }
+  &__h2 {
+    font-family: GothamTitle;
+    font-size: px-to-em(22px);
+    letter-spacing: px-to-em(1px);
+    @include text-linear;
+  }
+  &__h3 {
+    font-family: GothamTitle;
+    font-size: px-to-em(24px);
+    margin: 0 0 px-to-em(16px) 0;
+    @include text-linear;
+  }
+  &__article {
+    @include flex(column, wrap, center, center, 1em);
+    cursor: pointer;
+  }
+  &__name {
+    font-size: px-to-em(19px);
+  }
+  &__description {
+    background: $color-black;
+    position: absolute;
+    bottom: 100%;
+    box-sizing: content-box;
+    padding: px-to-em(8px);
+    left: 2%;
+    width: 90%;
+    color: $color-gentle;
+    line-height: 1.2;
+    @include flex(column, wrap, center, center, 1em);
+    border-radius: px-to-em(10px);
+    font-size: px-to-em(17px);
+  }
+  &__down {
+    position: absolute;
+    // bottom: 103%;
+    right: 50%;
+    @include flex(column, wrap, center, center, 1em);
+  }
+}

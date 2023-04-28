@@ -1,0 +1,89 @@
+.about {
+  text-align: center;
+  @include flex(column, nowrap, center, center, px-to-em(24px));
+  &__welcome {
+    @include text-linear;
+    padding: px-to-em(24px) px-to-em(0px) px-to-em(0px);
+    line-height: 1.15;
+    max-width: 25em;
+  }
+  &__greetings {
+    color: #fff;
+    -webkit-background-clip: none;
+    -moz-background-clip: none;
+    background-clip: none;
+  }
+  &__ul {
+    padding: px-to-em(0px) px-to-em(6px);
+    line-height: 1.2;
+    cursor: pointer;
+    max-width: px-to-em(780px);
+  }
+  &__lenguages {
+    cursor: pointer;
+    @include text-linear;
+    position: relative;
+    font-size: px-to-em(15px);
+  }
+  &__title {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    display: block;
+    background: $color-black;
+    padding: px-to-em(3px);
+    width: 100%;
+    height: px-to-em(25px);
+    @include flex(row, nowrap, center, center, 0);
+    border-radius: px-to-em(3px);
+  }
+  &__svg {
+    // color: $color-black;
+    position: absolute;
+    top: 75%;
+    color: $color-black;
+  }
+
+  &__div {
+    @include flex(row, nowrap, center, center, 0);
+  }
+  &__p {
+    background: $color-gentle;
+    padding: px-to-em(10px);
+    border-radius: px-to-em(8px);
+    position: relative;
+    @include shadow(5px);
+    &:hover .about__background {
+      width: 100%;
+    }
+  }
+  &__image {
+    object-fit: contain;
+    width: 90vw;
+    max-width: px-to-em(400px);
+    height: auto;
+    border-radius: px-to-em(16px);
+  }
+  &__h2 {
+    font-family: GothamTitle;
+    font-size: px-to-em(22px);
+    letter-spacing: px-to-em(1px);
+    @include text-linear;
+  }
+  &__a {
+    @include text-linear;
+    font-size: px-to-em(20px);
+    position: relative;
+    z-index: 5;
+  }
+  &__background {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-radius: px-to-em(8px);
+    top: 0;
+    background: $color-black;
+    left: 0;
+    transition: width 0.5s ease;
+  }
+}

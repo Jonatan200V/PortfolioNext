@@ -1,0 +1,31 @@
+.logo {
+  object-fit: contain;
+  width: px-to-em(86px);
+  height: px-to-em(59px);
+}
+.burger {
+  @include flex(row, nowrap, center, center, 0);
+  background: $color-purple;
+  padding: px-to-em(8px);
+  border-radius: 50%;
+  &__bottom {
+    position: fixed;
+    bottom: px-to-em(5px);
+    right: 0;
+    box-shadow: px-to-em(0px) px-to-em(8px) px-to-em(12px) px-to-em(-2px)
+      rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    z-index: 5;
+    border: px-to-em(2px) solid #fff;
+  }
+}
+.main {
+  @include flex(column, nowrap, center, center, 1.5em);
+}
+.close {
+  filter: brightness(0%);
+}
+.svg {
+  width: px-to-em(70px);
+  height: px-to-em(70px);
+}
