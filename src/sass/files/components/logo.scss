@@ -22,6 +22,7 @@
 }
 .main {
   @include flex(column, nowrap, center, center, 1.5em);
+  overflow-x: hidden;
 }
 .close {
   filter: brightness(0%);
