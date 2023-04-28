@@ -2,7 +2,7 @@
   @include flex(column, nowrap, center, center, 1.5em);
   width: 100vw;
   max-width: px-to-em(1468px);
-  padding: 0 1em;
+  padding: px-to-em(80px) 1em 0;
   &__h2 {
     @include text-linear;
     text-align: center;

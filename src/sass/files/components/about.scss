@@ -1,9 +1,9 @@
 .about {
   text-align: center;
   @include flex(column, nowrap, center, center, px-to-em(24px));
+  padding: px-to-em(95px) 0 0 0;
   &__welcome {
     @include text-linear;
-    padding: px-to-em(24px) px-to-em(0px) px-to-em(0px);
     line-height: 1.15;
     max-width: 25em;
   }
@@ -46,6 +46,8 @@
 
   &__div {
     @include flex(row, nowrap, center, center, 0);
+    position: relative;
+    z-index: 1;
   }
   &__p {
     background: $color-gentle;
@@ -74,7 +76,7 @@
     @include text-linear;
     font-size: px-to-em(20px);
     position: relative;
-    z-index: 5;
+    z-index: 2;
   }
   &__background {
     position: absolute;

@@ -1,6 +1,8 @@
 .tech {
   text-align: center;
   @include flex(column, wrap, center, center, 1.5em);
+  padding: px-to-em(80px) 1em 0;
+
   &__section {
     @include flex(row, wrap, center, center, 0.5em);
     width: 100vw;

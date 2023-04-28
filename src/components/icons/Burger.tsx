@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { motion, useCycle } from 'framer-motion';
+import { Cycle, motion, useCycle } from 'framer-motion';
 
 interface VariantsProps {
   d?: string;
@@ -15,7 +15,11 @@ interface PropsPath {
   d?: string;
   transition?: Duration;
 }
-
+interface BurgerProps {
+  toogleBurger: Cycle;
+  burger: boolean;
+  view?: boolean;
+}
 const Path = (props: PropsPath) => (
   <motion.path
     fill="transparent"
@@ -26,10 +30,13 @@ const Path = (props: PropsPath) => (
   />
 );
 
-export const Burger = () => {
-  const [burger, toogleBurger] = useCycle<boolean>(true, false);
+export const Burger = ({ burger, toogleBurger, view }: BurgerProps) => {
   return (
-    <button onClick={() => toogleBurger()} className="burger">
+    <button
+      onClick={() => toogleBurger()}
+      className="burger"
+      style={{ zIndex: `${view ? 20 : 5}` }}
+    >
       <svg
         width="30"
         height="30"

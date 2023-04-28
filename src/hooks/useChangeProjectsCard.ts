@@ -67,11 +67,11 @@ export default function useChangeProjectsCard() {
     }
 
     setViewModal(() => true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'hidden';
   };
   const closeModal = () => {
     setViewModal(() => false);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflowY = 'auto';
   };
   const onClickCardProject = (id: number) => {
     if (viewCardInfo > viewWidth) {

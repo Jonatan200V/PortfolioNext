@@ -171,7 +171,6 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  overflow-x: hidden;
   /* (Opcional) */
   hyphens: auto;
   /* (Opcional) */
@@ -183,6 +182,7 @@ body {
   overflow-y: scroll; /* Esto hace que la barra de desplazamiento siempre esté presente */
   scrollbar-width: none; /* Esto oculta la barra de desplazamiento */
   font-family: GothamLight;
+  overflow-x: hidden;
 }
 
 select::-ms-expand {
@@ -229,6 +229,8 @@ select:focus {
   background: #8e2de2;
   padding: 0.5em;
   border-radius: 50%;
+  position: relative;
+  border: 0.125em solid #fff;
 }
 .burger__bottom {
   position: fixed;
@@ -236,8 +238,7 @@ select:focus {
   right: 0;
   box-shadow: 0em 0.5em 0.75em -0.125em rgba(0, 0, 0, 0.75);
   border-radius: 50%;
-  z-index: 5;
-  border: 0.125em solid #fff;
+  z-index: 20;
 }
 
 .main {
@@ -257,6 +258,41 @@ select:focus {
   height: 4.375em;
 }
 
+.routes {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: #8e2de2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.routes__div {
+  width: 100%;
+  height: 3em;
+  flex-grow: 1;
+}
+.routes__a {
+  color: #f7f6f6;
+  font-size: 1.25em;
+  font-family: GothamMedium;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.routes__a:hover {
+  background: rgba(142, 45, 226, 0.4392156863);
+}
+
 .header {
   height: clamp(4.9375em, 3.125em + 1.05vw, 9.375em);
   display: flex;
@@ -265,6 +301,9 @@ select:focus {
   align-items: center;
   gap: 0.3125em;
   width: 100vw;
+  top: 0;
+  position: fixed;
+  z-index: 20;
 }
 .header__div {
   display: flex;
@@ -275,10 +314,8 @@ select:focus {
   padding: 0.625em 0.375em;
   background: #f7f6f6;
   box-shadow: 0em 0.1875em 0.3125em -0.3125em rgba(0, 0, 0, 0.75);
-  position: fixed;
   width: 100vw;
   max-width: 91.75em;
-  z-index: 10;
 }
 .header__ul {
   display: flex;
@@ -292,6 +329,10 @@ select:focus {
   padding: 0.3125em;
   border-radius: 50%;
 }
+.header__btn {
+  position: relative;
+  z-index: 20;
+}
 
 [data-icon=true] {
   border: 0.0625em solid #8e2de2;
@@ -304,6 +345,7 @@ select:focus {
   justify-content: center;
   align-items: center;
   gap: 1.5em;
+  padding: 5.9375em 0 0 0;
 }
 .about__welcome {
   font-family: GothamTitle;
@@ -313,7 +355,6 @@ select:focus {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  padding: 1.5em 0em 0em;
   line-height: 1.15;
   max-width: 25em;
 }
@@ -368,6 +409,8 @@ select:focus {
   justify-content: center;
   align-items: center;
   gap: 0;
+  position: relative;
+  z-index: 1;
 }
 .about__p {
   background: #f7f6f6;
@@ -408,7 +451,7 @@ select:focus {
   color: transparent;
   font-size: 1.25em;
   position: relative;
-  z-index: 5;
+  z-index: 2;
 }
 .about__background {
   position: absolute;
@@ -428,6 +471,7 @@ select:focus {
   justify-content: center;
   align-items: center;
   gap: 1.5em;
+  padding: 5em 1em 0;
 }
 .tech__section {
   display: flex;
@@ -519,7 +563,7 @@ select:focus {
   gap: 1.5em;
   width: 100vw;
   max-width: 91.75em;
-  padding: 0 1em;
+  padding: 5em 1em 0;
 }
 .projects__h2 {
   font-family: GothamTitle;
@@ -773,6 +817,10 @@ select:focus {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+}
+
+main {
+  width: 100vw;
 }
 
 /*# sourceMappingURL=main.css.map */

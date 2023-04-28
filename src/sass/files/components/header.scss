@@ -2,15 +2,16 @@
   height: clamp(px-to-em(79px), px-to-em(50px) + 1.05vw, px-to-em(150px));
   @include flex(row, nowrap, center, center, px-to-em(5px));
   width: 100vw;
+  top: 0;
+  position: fixed;
+  z-index: 20;
   &__div {
     @include flex(row, nowrap, space-between, center, 0);
     padding: px-to-em(10px) px-to-em(6px);
     background: #f7f6f6;
     @include shadow();
-    position: fixed;
     width: 100vw;
     max-width: px-to-em(1468px);
-    z-index: 10;
   }
   &__ul {
     @include flex(row, nowrap, center, center, px-to-em(5px));
@@ -19,6 +20,10 @@
     border: px-to-em(1px) solid $color-blue;
     padding: px-to-em(5px);
     border-radius: 50%;
+  }
+  &__btn {
+    position: relative;
+    z-index: 20;
   }
 }
 

@@ -7,7 +7,7 @@ import Info from './Info';
 
 export default function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <h1 className="about__welcome">
         Hola, Bienvenido <span className="about__greetings">👋</span> soy
         Jonatan Valdiviezo Desarrollador <Info icons={[<Next />]} text="Web" />

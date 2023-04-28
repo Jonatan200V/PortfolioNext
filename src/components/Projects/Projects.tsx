@@ -27,7 +27,7 @@ export default function Projects() {
   } = useChangeProjectsCard();
 
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2 className="projects__h2">Proyectos</h2>
       <div className="projects__background" />
       <div className="projects__div">

@@ -2,6 +2,8 @@ import React from 'react';
 import Logo from './Logo';
 import { Burger } from '../icons';
 import { icons } from '../icons/maps';
+import MenuMobile from './MenuMobile';
+import BurgerAction from './BurgerAction';
 
 export default function Header() {
   return (
@@ -16,9 +18,7 @@ export default function Header() {
               </a>
             </li>
           ))}
-          <li className="header__burger">
-            <Burger />
-          </li>
+          <BurgerAction />
         </ul>
       </div>
     </header>

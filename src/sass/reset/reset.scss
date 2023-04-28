@@ -157,7 +157,6 @@ body {
   font-size: 100%;
   // font-family: var(--font-principal);
   // color: var(--negro);
-  overflow-x: hidden;
   /* (Opcional) */
   hyphens: auto;
   /* (Opcional) */
@@ -171,6 +170,7 @@ body {
   overflow-y: scroll; /* Esto hace que la barra de desplazamiento siempre esté presente */
   scrollbar-width: none; /* Esto oculta la barra de desplazamiento */
   font-family: GothamLight;
+  overflow-x: hidden;
 }
 select::-ms-expand {
   display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/

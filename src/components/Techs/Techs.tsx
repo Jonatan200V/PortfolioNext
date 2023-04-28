@@ -4,7 +4,7 @@ import CardIcon from './CardIcon';
 
 export default function Techs() {
   return (
-    <div className="tech">
+    <div className="tech" id="techs">
       <h2 className="tech__h2">Tecnologias</h2>
       <section className="tech__section">
         {techsMap.map((tech, i) => (
