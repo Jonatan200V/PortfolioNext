@@ -7,6 +7,7 @@
     @include text-linear;
     text-align: center;
     position: relative;
+    font-size: px-to-em(30px);
   }
   &__div {
     @include flex(row, wrap, center, center, 0.8em);

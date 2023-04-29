@@ -25,6 +25,11 @@ export const links: LinksMobile[] = [
     id: 402,
     name: 'Proyectos',
   },
+  {
+    route: '#footer',
+    id: 403,
+    name: 'Contactame',
+  },
 ];
 
 export default function MenuMobile({ close }: Props) {

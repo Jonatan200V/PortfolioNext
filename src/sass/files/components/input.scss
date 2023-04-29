@@ -1,0 +1,35 @@
+.input {
+  position: relative;
+  width: 100%;
+  @include responsive(px-to-em(480px)) {
+    width: 45%;
+  }
+  &__input {
+    width: 100%;
+    height: px-to-em(32px);
+    box-shadow: 0px 2px 3px #000;
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 0.5em 0.8em;
+    border-radius: 0.5em;
+  }
+  &__label {
+    padding: 0.5em 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  &__active {
+    background: transparent;
+    top: 0;
+    color: $color-purple;
+  }
+}
+.input__input:focus ~ .input__label {
+  background: transparent;
+  top: 0;
+  color: $color-purple;
+}

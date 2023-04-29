@@ -6,6 +6,7 @@
     @include text-linear;
     line-height: 1.15;
     max-width: 25em;
+    font-size: px-to-em(29px);
   }
   &__greetings {
     color: #fff;
@@ -68,9 +69,9 @@
   }
   &__h2 {
     font-family: GothamTitle;
-    font-size: px-to-em(22px);
     letter-spacing: px-to-em(1px);
     @include text-linear;
+    font-size: px-to-em(30px);
   }
   &__a {
     @include text-linear;
@@ -87,5 +88,11 @@
     background: $color-black;
     left: 0;
     transition: width 0.5s ease;
+  }
+  &__container {
+    @include flex(row, wrap, center, flex-start, 1em);
+  }
+  &__item {
+    @include flex(column, wrap, center, center, 1em);
   }
 }
