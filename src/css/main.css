@@ -257,7 +257,6 @@ select:focus {
   justify-content: center;
   align-items: center;
   gap: 1.5em;
-  overflow-x: hidden;
 }
 
 .close {
