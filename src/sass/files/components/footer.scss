@@ -9,7 +9,7 @@
     @include flex(column, wrap, center, center, 0.5em);
     width: 100%;
     @include responsive(px-to-em(768px)) {
-      width: 40%;
+      width: 45%;
     }
   }
   &__inputs {
@@ -39,7 +39,8 @@
     display: inline;
   }
   &__left {
-    width: 45%;
+    width: 95%;
+    max-width: px-to-em(370px);
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -57,9 +58,9 @@
 
   &__end {
     width: 100%;
-    @include flex(row, wrap, center, center, 2em);
+    @include flex(row, wrap, center, center, 1em);
     @include responsive(px-to-em(768px)) {
-      width: 40%;
+      width: 45%;
     }
   }
 
@@ -84,7 +85,20 @@
     align-self: flex-center;
     text-align: center;
     padding: 0 0.5em;
-    width: 45%;
+    width: 95%;
+    max-width: px-to-em(370px);
     color: $color-gentle;
+  }
+  &__view--left {
+    @include responsive(px-to-em(1700px)) {
+      display: none;
+    }
+    display: block;
+  }
+  &__view--right {
+    @include responsive(px-to-em(1700px)) {
+      display: block;
+    }
+    display: none;
   }
 }

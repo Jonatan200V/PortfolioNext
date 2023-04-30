@@ -46,10 +46,10 @@
     @include flex(column, wrap, center, center, 1em);
     border-radius: px-to-em(10px);
     font-size: px-to-em(17px);
+    z-index: 2;
   }
   &__down {
     position: absolute;
-    // bottom: 103%;
     right: 50%;
     @include flex(column, wrap, center, center, 1em);
   }
