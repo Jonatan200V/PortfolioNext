@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <Header />
       <BottomBurger />
-      <div className="main">
+      <div className="main" style={{ overflow: 'hidden' }}>
         <About />
         <Techs />
         <Projects />
