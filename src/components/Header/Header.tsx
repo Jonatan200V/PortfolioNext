@@ -1,8 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
-import { Burger } from '../icons';
 import { icons } from '../icons/maps';
-import MenuMobile, { links } from './MenuMobile';
 import BurgerAction from './BurgerAction';
 import LinksPage from './LinksPage';
 export default function Header() {

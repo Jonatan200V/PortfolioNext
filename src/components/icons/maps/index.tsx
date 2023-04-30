@@ -5,18 +5,22 @@ import { backendIcons } from './backend';
 import { controller } from './controllers';
 import { frontend } from './frontend';
 import { mobile } from './mobile';
-
+export const linkGithub = 'https://github.com/Jonatan200V';
+export const linkLinkedin =
+  'https://www.linkedin.com/in/jonatan-valdiviezo2205/';
+export const linkWhatsapp =
+  'https://api.whatsapp.com/send?phone=2612112078&text=Hola como estas';
 export const icons: IconsLinks[] = [
   {
     id: 100,
-    href: 'https://github.com/Jonatan200V',
+    href: linkGithub,
     icon: <GitHub />,
     name: 'Github',
     color: 1,
   },
   {
     id: 101,
-    href: 'https://www.linkedin.com/in/jonatan-valdiviezo2205/',
+    href: linkLinkedin,
     icon: <Linkedin />,
     name: 'Linkedin',
     color: 0,

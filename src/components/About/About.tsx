@@ -5,6 +5,29 @@ import ReactNative from '../icons/techs/ReactNative';
 import Next from '../icons/techs/Next';
 import Info from './Info';
 
+interface AboutText {
+  id: number;
+  text: string;
+}
+
+const aboutText: AboutText[] = [
+  {
+    id: 501,
+    text: 'Estudie programacion en la secundaria, despues empece haciendo cursos en freecodecamp y youtube cuando supe que esto era lo mio quise ponerme a prueba y me inscribi en el bootcamp de soy HENRY.',
+  },
+  {
+    id: 502,
+    text: 'Dentro de Soy Henry, más que aprender a programar, aprendí a comunicarme con otras personas y mejorar mis soft skill teniamos un proyecto individual y uno grupal lo genial venía en el último mencionado porque teníamos reuniones todos los días, y un mentor que nos acompañaba en ese trayecto iba entendiendo como seria trabajar de desarrollador el día a día.',
+  },
+  {
+    id: 503,
+    text: 'Después de Soy Henry tuve algunos trabajos de freelance junto a estos tuve que aprender en la marcha tecnologías que no había tocado tanto antes como Firebase, React Native y complementarlo con Typescript.',
+  },
+  {
+    id: 504,
+    text: 'Por último, y con todo lo que he contado hasta ahora quiero decir que soy una persona que le gusta aprender mucho más si tiene que ver con JavaScript pero en sí me gusta todo lo nuevo y también mejorar lo antiguo.',
+  },
+];
 export default function About() {
   return (
     <div className="about" id="about">
@@ -35,13 +58,8 @@ export default function About() {
         <div className="about__item">
           <h2 className="about__h2">Sobre Mi</h2>
           <ul className="about__ul">
-            {Array.from({ length: 5 }, (_, i) => (
-              <li key={i}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur nulla repellat similique modi. Quod, a nisi debitis
-                voluptatem nam maiores molestiae porro nesciunt repudiandae
-                suscipit totam aspernatur. Aspernatur, nobis suscipit.
-              </li>
+            {aboutText.map((about) => (
+              <li key={about.id}>{about.text}</li>
             ))}
           </ul>
         </div>

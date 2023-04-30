@@ -1,6 +1,7 @@
 .footer {
   @include flex(row, wrap, center, center, 1em);
   padding: px-to-em(80px) 0 px-to-em(20px) 0;
+  position: relative;
   &__footer {
     @include flex(row, wrap, center, flex-start, 1em);
   }
@@ -31,23 +32,59 @@
   }
   &__span {
     font-weight: bold;
+    display: inline;
+    cursor: pointer;
   }
   &__span > svg {
     display: inline;
   }
+  &__left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
   &__text {
     word-wrap: break-word;
     line-height: 1.5;
-    padding: 0 0.5em;
-  }
-  &__text:nth-child(2) {
+    position: relative;
+    width: 100%;
     text-align: center;
+    height: 11em;
+    padding: 0 1.5em 0 0;
+    @include flex(row, wrap, center, center, 2em);
   }
 
   &__end {
     width: 100%;
+    @include flex(row, wrap, center, center, 2em);
     @include responsive(px-to-em(768px)) {
       width: 40%;
     }
+  }
+
+  &__background {
+    height: 11em;
+    width: 100%;
+    background: $color-blue;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+    right: 0;
+  }
+  &__backgroundtow {
+    -webkit-clip-path: polygon(10% 1%, 100% 1%, 100% 100%, 10% 100%, 0% 50%);
+    clip-path: polygon(10% 1%, 100% 1%, 100% 100%, 10% 100%, 0% 50%);
+    left: 0;
+    background: $color-purple;
+  }
+  &__right {
+    align-self: flex-center;
+    text-align: center;
+    padding: 0 0.5em;
+    width: 45%;
+    color: $color-gentle;
   }
 }

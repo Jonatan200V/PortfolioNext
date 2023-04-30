@@ -19,6 +19,7 @@
     line-height: 1.2;
     cursor: pointer;
     max-width: px-to-em(780px);
+    @include flex(column, nowrap, center, center, px-to-em(20px));
   }
   &__lenguages {
     cursor: pointer;
