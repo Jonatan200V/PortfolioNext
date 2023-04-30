@@ -22,7 +22,10 @@
     font-size: px-to-em(30px);
   }
   &__message {
-    width: 92.5%;
+    width: 100%;
+    @include responsive(px-to-em(768px)) {
+      width: 95.5%;
+    }
   }
   &__msg {
     top: 10%;

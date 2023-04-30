@@ -250,6 +250,14 @@ select:focus {
     display: none;
   }
 }
+.burger__menu {
+  position: "absolute";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
 
 .main {
   display: flex;
@@ -974,7 +982,12 @@ select:focus {
   font-size: 1.875em;
 }
 .footer__message {
-  width: 92.5%;
+  width: 100%;
+}
+@media screen and (min-width: 48em) {
+  .footer__message {
+    width: 95.5%;
+  }
 }
 .footer__msg {
   top: 10%;

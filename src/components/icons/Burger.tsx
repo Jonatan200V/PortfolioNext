@@ -30,6 +30,8 @@ const Path = (props: PropsPath) => (
 );
 
 export const Burger = ({ burger, view }: BurgerProps) => {
+  console.log({ burgerSvg: burger, view });
+
   return (
     <div className="burger" style={{ zIndex: `${view ? 20 : 5}` }}>
       <svg

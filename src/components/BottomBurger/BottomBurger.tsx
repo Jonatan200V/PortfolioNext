@@ -31,6 +31,8 @@ export default function BottomBurger() {
     >
       <div onClick={routes}>
         <Burger burger={burger} view={viewRoutes} />
+      </div>
+      <div className="burger__menu">
         <AnimatePresence>
           {viewRoutes && <MenuMobile close={closeRoutes} />}
         </AnimatePresence>

@@ -12,11 +12,14 @@ export default function useBurger() {
     setViewRoutes(false);
   };
   const routes = () => {
+    console.log({ burger });
+
     viewRoutes
       ? (document.body.style.overflowY = 'auto')
       : (document.body.style.overflowY = 'hidden');
     toogleBurger();
     setViewRoutes(!viewRoutes);
+    console.log({ burger });
   };
 
   return {

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { Burger } from '../icons';
 import MenuMobile from './MenuMobile';
 import { AnimatePresence } from 'framer-motion';
